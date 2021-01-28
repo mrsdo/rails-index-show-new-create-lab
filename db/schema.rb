@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20210128132948) do
 
-  create_table "coupons_tables", force: :cascade do |t|
+  create_table "coupons", force: :cascade do |t|
     t.string   "coupon_code"
     t.string   "store"
     t.datetime "created_at",  null: false
