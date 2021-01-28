@@ -1,0 +1,48 @@
+<h1>Confirm Changes?</h1>
+
+
+<section id="page">
+  <table class="table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Coupon Code</th>
+      <th>Store</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th></th>
+      <th></th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td><a href='/roles/<%= @coupon.id %>/edit'><%= @role.id %></a></td>
+        <td><%= coupon.id.to_s %></td>
+        <td><%= coupon.coupon_code %></td>
+        <td><%= coupon.store %></td>
+        <td><%= coupon.created_at.to_s %></td>
+        <td><%= coupon.updated_at.to_s %></td>
+        <td><form method="get" action="/coupons">
+          <input type="submit" value="Continue" class="button" />
+        </form></td>
+        <td>  <form method="post" action="/coupons/<%= @role.id %>">
+          <input type="hidden" name="_method" value="delete" />
+          <input type="submit" value="Delete" class="button" />
+        </form></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+  <nav>
+    <ol>
+      <li><a href="/roles">Roles Home</a></li>
+      <li><a href="/roles/new">New</a></li>
+
+    </ol>
+  </nav>
+
+</section>

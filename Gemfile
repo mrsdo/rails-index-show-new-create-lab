@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'byebug'
   gem 'spring'
-  gem 'rspec-rails','>= 3.5.2'
+  gem 'rspec-rails'
   gem "factory_bot_rails"
   gem 'capybara'
   gem 'database_cleaner'
