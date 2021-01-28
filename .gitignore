@@ -34,3 +34,7 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+.idea/rails-index-show-new-create-lab.iml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/dataSources.xml
+*.iml
