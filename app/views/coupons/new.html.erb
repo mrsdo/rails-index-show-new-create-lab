@@ -1,20 +1,23 @@
-<h1>Add New Role</h1>
+<h1>Add New</h1>
+
 <section id="page">
-<form class="form" action="/coupons" method="post">
-  <label for="coupon_code" class="label-name">Coupon Code</label>
-  <label for="store" class="label-name">Store</label>
-  <input type="text" id="coupon_code" name="coupon_code" maxlength="40" class="field field-name" />
+  <%= form_tag coupons_path do %>
+    <label>Coupon Code:</label><br>
+    <%= text_field_tag :coupon_code %><br>
 
-  <input type="submit" value="Create New Coupon" class="button" />
-</form>
+    <label>Coupon Store</label><br>
+    <%= text_field_tag :store %><br>
 
-<nav>
-  <ol>
-    <li><a href="/coupons/new">coupons Home</a></li>
-    <li><a href="/coupons/show">View</a></li>
-    <li><a href="/coupons/new">New</a></li>
-    <li><a href="/coupons/edit">Edit</a></li>
+    <%= submit_tag "Submit Post" %>
+  <% end %>
+  <nav>
+    <ol>
+      <li><a href="/coupons/new">coupons Home</a></li>
+      <li><a href="/coupons/show">View</a></li>
+      <li><a href="/coupons/new">New</a></li>
+      <li><a href="/coupons/edit">Edit</a></li>
 
-  </ol>
-</nav>
+    </ol>
+  </nav>
 </section>
+
