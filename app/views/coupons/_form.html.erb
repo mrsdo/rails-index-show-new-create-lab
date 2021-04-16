@@ -1,0 +1,21 @@
+<%= form_with(model: movie, local: true) do |form| %>
+  <%= form_tag coupons_path do %>
+    <label>Coupon Code:</label><br>
+    <%= form.text_field_tag :coupon_code %><br>
+
+    <label>Coupon Store</label><br>
+    <%= form.text_field_tag :store %><br>
+
+    <%= form.submit_tag "Submit Post" %>
+  <% end %>
+  <nav>
+    <ol>
+      <li><a href="/coupons/new">coupons Home</a></li>
+      <li><a href="/coupons/show">View</a></li>
+      <li><a href="/coupons/new">New</a></li>
+      <li><a href="/coupons/edit">Edit</a></li>
+
+    </ol>
+  </nav>
+<% end %>
+
